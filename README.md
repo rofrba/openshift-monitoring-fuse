@@ -31,6 +31,7 @@ To set up Prometheus, install the Prometheus operator custom resource definition
     `$ oc create -f templates/grafana-configmap.yml `
  4. Mount the Config Map into Grafana container
     `$ oc set volume dc/grafana --add -t configmap -m /etc/grafana --name grafana-config --configmap-name grafana-config `
+ 5. Add the prometheus datasource with the path generated in the installation
 
 **IMPORTANT:** It's recommended to add a persistent volume mounted on /var/lib/grafana to protect the Grafana data, including users and dashboards.
 
