@@ -16,10 +16,10 @@ To set up Prometheus, install the Prometheus operator custom resource definition
     ` $ oc login -u system:admin `
     
  2. Install the Prometheus operator to your namespace by using the following command syntax:
-    ` $ oc process -f https://github.com/rofrba/openshift-monitoring-fuse/blob/master/templates/fuse-prometheus-operator.yml -p NAMESPACE=<YOUR NAMESPACE> | oc create -f - `
+    ` $ oc process -f templates/fuse-prometheus-operator.yml -p NAMESPACE=<YOUR NAMESPACE> | oc create -f - `
 
  3. Instruct the Prometheus operator to monitor the Fuse application in the project by using the following command syntax:
-     ` $ oc process -f https://github.com/rofrba/openshift-monitoring-fuse/blob/master/templates/fuse-servicemonitor.yml -p NAMESPACE=<YOUR NAMESPACE> FUSE_SERVICE_NAME=<YOUR FUSE SERVICE> | oc apply -f - `
+     ` $ oc process -f templates/fuse-servicemonitor.yml -p NAMESPACE=<YOUR NAMESPACE> FUSE_SERVICE_NAME=<YOUR FUSE SERVICE> | oc apply -f - `
 
 
 ## Install Grafana
