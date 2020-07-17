@@ -2,7 +2,11 @@
 
 You can use **Prometheus** to monitor and store **Fuse on OpenShift** data by exposing endpoints with your Fuse application’s data to Prometheus format. Prometheus stores the data so that you can use a graphical tool, such as Grafana, to visualize and run queries on the data.
 
+![Map](./img/ej1.png)
+
 You can use Prometheus to monitor Fuse applications that are running on an on-premise OpenShift cluster or on a single-node cluster, such as Minishift or the Red Hat Container Development Kit.
+
+![Escalability](./img/ej2.png)
 
 
 ## Setting up Prometheus
